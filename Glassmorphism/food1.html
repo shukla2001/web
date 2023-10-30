@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthy Food Suggestions</title>
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="../Img\FIT.png">
+
+  <!-- Add Bootstrap CSS Link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    body{
+      background-color: #f4eded;
+    }
+    header{
+      height: 15vh;
+    }
+      .navbar {
+        background-color: white;
+          margin: auto;
+          /* position: fixed; */
+          width: 95%;
+          /* padding: 35px 10px; */
+          margin: 0 0px 10px 30px;
+          border-radius: 25px;
+          display: flex;
+          justify-content: space-between;
+          /* align-items: center; */
+      }
+
+       
+       /* .navbar .collapse{
+      
+        margin-left: auto;
+        display: flex;
+        flex-wrap: wrap;
+      }  */
+
+
+      .logo {
+          display: flex;
+
+      }
+
+      .logo .span {
+          color: #F6416C;
+          font-family: var(--ff-catamaran);
+          font-size: 2.5rem;
+          font-weight: var(--fw-900);
+          display: flex;
+          align-items: center;
+          margin-left: 4px;
+      }
+
+      .logo .barbell-sharp {
+        margin-left: 10px;
+          pointer-events: none;
+          font-size: 30px;
+          /* transform: rotate(90deg) translate(-2px, -5px); */
+      }
+
+      .navbar .navbar-nav .nav-item {
+          list-style: none;
+          margin: 0 6px;
+      }
+
+      .navbar .navbar-nav a {
+          color: #000;
+          text-decoration: none;
+          font-size: 17px;
+          font-weight: 500;
+          /* transition: all 0.3s ease; */
+      }
+
+      .navbar .navbar-nav a:hover {
+          color: #f2f2f2;
+      }
+
+      .navbar .buttons input {
+          outline: none;
+          color: #fffbfb;
+          font-size: 18px;
+          font-weight: 500;
+          border-radius: 12px;
+          padding: 6px 15px;
+          border: none;
+          margin: 0 8px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          background-image: linear-gradient(135deg, #ff9a9e 10%, #F6416C 100%);
+      }
+
+      .navbar .buttons input:hover {
+          transform: scale(0.97);
+      }
+
+      @media (max-width:850px) {
+          .navbar .navbar {
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              padding: 15px 5px;
+          }
+
+          .navbar .menu {
+              margin: 10px 0 20px 0;
+          }
+
+          header .text-content {
+              margin: 30px 0 0 20px;
+              width: 70%;
+          }
+
+          header .text-content h2 {
+              font-size: 20px;
+          }
+      }
+
+      @media (max-width:390px) {
+          body {
+              height: 220vh;
+          }
+
+          header {
+              height: 80vh;
+              width: 80%;
+              border-radius: 10px;
+          }
+
+          .navbar {
+              width: 85%;
+          }
+
+          .navbar .collapse {
+              margin-right: 10px;
+              margin-left: auto;
+
+          }
+      }
+
+
+
+    .card-img-top {
+      height: 15rem;
+    }
+
+    .card-div {
+      min-height: 50rem;
+    }
+
+    .list-group-item {
+      min-height: 10rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="my_header">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="navbar-brand">
+          <!-- <a href="#"><img src="./img/logo.png" alt="fitnfine"></a> -->
+          <div class="logo">
+              <div class="barbell-sharp" aria-hidden="true"> <img src="Img\class-icon-1.png"></div>
+              <div class="span">Fit.n.Fine</div>
+          </div>
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+        <ul class="navbar-nav mr-auto" style="margin: auto;">
+          <li class="nav-item">
+            <a class="nav-link" href="..\index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="..\contact.html">Contact</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Fitness
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="..\physicalfitness\physicalfitness.html">Physical Fitness</a>
+              <a class="dropdown-item" href="..\mentalfitness\mentalfitness.html">Mental Fitness</a>
+              <a class="dropdown-item active" href="#">Nutrition</a>
+            </div>
+          </li>
+        </ul>
+        <div class="buttons" style="margin: auto;">
+          <input type="button" value="Login" onclick="window.location.href = 'signin1.html';">
+          <input type="button" value="Register" onclick="window.location.href = 'signup1.html';">
+        </div>
+      </div>
+  </nav>
+  </header>
+
+  <div class="container mt-4">
+    <h1 class="text-center mb-5">Healthy Food Suggestions</h1>
+    <div class="row">
+      <!-- High Protein Section -->
+      <div class="col-lg-4 col-md-6 mb-4 card-div">
+        <article class="card h-100 rounded-5">
+          <img src="img/protein.jpg" class="card-img-top" alt="High-Protein Food Image" />
+          <div class="card-body">
+            <h2 class="card-title">High-Protein</h2>
+            <p class="card-text">
+            <h6>High protein foods are rich in a vital macronutrient essential for building and repairing tissues. They support muscle health and overall well-being.</h6>
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <b>Eggs (2 large):</b> <br>Versatile protein source with 12 grams per
+              serving, assisting in muscle maintenance and overall health.
+            </li>
+            <li class="list-group-item">
+              <b>Greek Yogurt (6 oz):</b><br>Packed with protein (around 15 grams)
+              and probiotics, aiding in digestion and muscle recovery.
+            </li>
+            <li class="list-group-item">
+              <b>Salmon (3 oz):</b><br>
+              Rich in omega-3 fatty acids and offering around 21 grams of
+              protein.
+            </li>
+          </ul>
+          <div class="card-footer">
+            <a href="https://www.healthline.com/nutrition/high-protein-foods" class="card-link">Learn More</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Fibre Rich Section -->
+      <div class="col-lg-4 col-md-6 mb-4 card-div">
+        <article class="card h-100 rounded-5">
+          <img src="img/fiber.jpg" class="card-img-top" alt="Fibre-Rich Food Image" />
+          <div class="card-body">
+            <h2 class="card-title">Fibre-Rich</h2>
+            <p class="card-text">
+            <h6>Fiber-rich foods are packed with dietary fiber, promoting digestive health and providing a sense of fullness and satiety.<h6>
+            </p>
+
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <b>Black Beans (1/2 cup, cooked):</b><br>High in fiber (7 grams),
+              supporting digestion and satiety.
+            </li>
+            <li class="list-group-item">
+              <b>Broccoli (1 cup, cooked):</b><br> Fiber-rich vegetable (5 grams) for
+              digestive health.
+            </li>
+            <li class="list-group-item">
+              <b>Chia Seeds (2 tablespoons):</b><br> Tiny seeds with 10 grams of fiber,
+              promoting digestion and satiety.
+            </li>
+          </ul>
+          <div class="card-footer">
+            <a href="https://www.healthline.com/nutrition/22-high-fiber-foods" class="card-link">Learn More</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Low Calorie Section -->
+      <div class="col-lg-4 col-md-6 mb-4 card-div">
+        <article class="card h-100 rounded-5">
+          <img src="img/calorie.jpg" class="card-img-top" alt="Low Calorie Food Image" />
+          <div class="card-body">
+            <h2 class="card-title">Low Calorie</h2>
+            <p class="card-text">
+            <h6>Low-calorie foods have a reduced calorie content, making them ideal for weight management and calorie control.</h6>
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <b>Cucumber: </b><br>Extremely low in calories, high in water content, and
+              keeps you hydrated.
+            </li>
+            <li class="list-group-item">
+              <b>Watermelon:</b><br> Refreshing and low-calorie, ideal for hydration,
+              with approximately 46 calories per cup.
+            </li>
+            <li class="list-group-item">
+              <b>Cauliflower:</b><br> Offers around 25 calories per cup, a great
+              low-calorie substitute for starches.
+            </li>
+          </ul>
+          <div class="card-footer">
+            <a href="https://www.healthline.com/nutrition/zero-calorie-foods" class="card-link">Learn More</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Antioxidant Rich Section -->
+      <div class="col-lg-4 col-md-6 mb-4 card-div">
+        <article class="card h-100 rounded-5">
+          <img src="img/antioxidants.jpg" class="card-img-top" alt="Antioxidant Rich Food Image" />
+          <div class="card-body">
+            <h2 class="card-title">Antioxidant Rich</h2>
+            <p class="card-text">
+            <h6>Antioxidant-rich foods contain compounds that protect cells from free radical damage, supporting overall health and well-being.</h6>
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <b> Blueberries (1 cup): </b><br />Loaded with antioxidants,
+              they help protect your cells from damage.
+            </li>
+            <li class="list-group-item">
+              <b>Kale (1 cup, raw): </b><br />
+              Rich in vitamin C and beta-carotene, fighting inflammation and
+              oxidative stress
+            </li>
+            <li class="list-group-item">
+              <b>Dark Chocolate (1 oz, 70% cocoa or higher):</b><br />
+              flavonoids that support heart health.
+            </li>
+          </ul>
+          <div class="card-footer">
+            <a href="https://www.healthline.com/nutrition/zero-calorie-foods" class="card-link">Learn More</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Weight loss Section -->
+      <div class="col-lg-4 col-md-6 mb-4 card-div">
+        <article class="card h-100 rounded-5">
+          <img src="img/weight.jpg" class="card-img-top" alt="Weight loss Food Image" />
+          <div class="card-body">
+            <h2 class="card-title">Weight loss</h2>
+            <p class="card-text">
+              <h6>Weight loss foods aid in managing body weight and achieving weight loss goals, making them valuable for those seeking to lose weight.</h6>
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <b>Green Tea: </b><br>Contains catechins that may boost metabolism and
+              support weight loss.
+            </li>
+            <li class="list-group-item">
+              <b>Grapefruit:</b><br> Known for its potential role in weight loss, it may
+              help control appetite and regulate blood sugar.
+            </li>
+            <li class="list-group-item">
+              <b>Lentils:</b><br> High in fiber and protein, promoting fullness and
+              weight management.
+            </li>
+          </ul>
+          <div class="card-footer">
+            <a href="https://www.healthline.com/nutrition/zero-calorie-foods" class="card-link">Learn More</a>
+          </div>
+        </article>
+      </div>
+      <!-- Energy-Boosting Section -->
+      <div class="col-lg-4 col-md-6 mb-4 card-div">
+        <article class="card h-100 rounded-5">
+          <img src="img/energy.jpg" class="card-img-top" alt="Energy-Boosting Food Image" />
+          <div class="card-body">
+            <h2 class="card-title">Energy-Boosting</h2>
+            <p class="card-text">
+              <h6>Energy-boosting foods provide quick and sustained energy, combating fatigue and enhancing alertness.</h6>
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <b>Almonds (1 oz, about 23 almonds):</b><br> Rich in healthy fats and
+              protein for a quick energy boost.
+            </li>
+            <li class="list-group-item">
+              <b>Bananas (1 medium):</b><br> Natural sugars like glucose, fructose, and
+              sucrose provide quick energy.
+            </li>
+            <li class="list-group-item">
+              <b>Oatmeal (1/2 cup, dry):</b><br> Complex carbs with soluble fiber for
+              sustained energy.
+            </li>
+          </ul>
+          <div class="card-footer">
+            <a href="https://www.healthline.com/nutrition/zero-calorie-foods" class="card-link">Learn More</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <footer style="background-color: azure;">
+    <div class="container-fluid p-3 bg-dark-subtle">
+        <div class="row text-left">
+            <div class="col-md-5 col-sm-5">
+                <h4 class="text-dark">About us</h4>
+                <p class="text-muted"><b> Fit N Fine</b> is your trusted partner in fitness and well-being.We're
+                    dedicated
+                    to empowering individuals to live healthier lifestyles.
+                    Our team crafts tailored programs to meet every fitness goal.</p>
+                <p class="pt-4 text-muted">Copyright ©2023 All rights reserved
+                    <span> Fit N Fine</span>
+                </p>
+            </div>
+            <div class="col-md-5 col-sm-12">
+                <h4 class="text-dark">Newsletter</h4>
+                <p class="text-muted">Stay Updated</p>
+                <form class="form-inline">
+                    <div class="col pl-0">
+                        <div class="input-group pr-5">
+                            <input type="text" class="form-control bg-dark text-white"
+                                id="inlineFormInputGroupUsername2" placeholder="Email">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="bi bi-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-2 col-sm-12">
+                <h4 class="text-dark">Follow Us</h4>
+                <p class="text-muted">Let us be social</p>
+                <div class="column text-dark">
+                    <a href="#" aria-label="facebook" class="text-dark"><i class="bi bi-facebook mx-1"></i></a>
+                    <a href="#" aria-label="instagram" class="text-dark"><i class="bi bi-instagram mx-1"></i></a>
+                    <a href="#" aria-label="twitter" class="text-dark"><i class="bi bi-twitter-x mx-1"></i></a>
+                    <a href="#" aria-label="youtube" class="text-dark"> <i class="bi bi-youtube mx-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fit N Fine</title>
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="Img\FIT.png">
+
+    <!--Boostrap Css File Link-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- or
+            
+        <link rel="stylesheet" href="./bootstrap.min.css">
+        -->
+
+    <!--Custom  Css File Link-->
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .navbar {
+            width: 95%;
+            opacity: 50px;
+
+            margin: 0 0px 10px 30px;
+            border-radius: 25px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        body {
+            background-color: #f4eded;
+            height: 150vh;
+           width: 100vw;
+           position: relative;
+           overflow-x: hidden;
+        }
+
+
+        .logo {
+            display: flex;
+
+        }
+
+        .logo .span {
+            color: #F6416C;
+            font-family: var(--ff-catamaran);
+            font-size: 2.5rem;
+            font-weight: var(--fw-900);
+            display: flex;
+            align-items: center;
+            margin-left: 4px;
+        }
+
+        .logo .barbell-sharp {
+            margin-left: 10px;
+            pointer-events: none;
+            font-size: 30px;
+            /* transform: rotate(90deg) translate(-2px, -5px); */
+        }
+
+        .navbar .navbar-nav .nav-item {
+            list-style: none;
+            margin: 0 6px;
+        }
+
+        .navbar .navbar-nav a {
+            color: #000;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 500;
+            /* transition: all 0.3s ease; */
+        }
+
+        .navbar .navbar-nav a:hover {
+            color: #f2f2f2;
+        }
+
+        .navbar .buttons input {
+            outline: none;
+            color: #fffbfb;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 12px;
+            padding: 6px 15px;
+            border: none;
+            margin: 0 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background-image: linear-gradient(135deg, #ff9a9e 10%, #F6416C 100%);
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+        }
+
+        .navbar .buttons input:hover {
+            transform: scale(0.97);
+        }
+
+        @media (max-width:850px) {
+            .navbar .navbar {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 15px 5px;
+            }
+
+            .navbar .menu {
+                margin: 10px 0 20px 0;
+            }
+
+            header .text-content {
+                margin: 30px 0 0 20px;
+                width: 70%;
+            }
+
+            header .text-content h2 {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width:390px) {
+            body {
+                height: 220vh;
+            }
+
+            header {
+                height: 80vh;
+                width: 80%;
+                border-radius: 10px;
+            }
+
+            .navbar {
+                width: 85%;
+            }
+
+            .navbar .collapse {
+                margin-right: 10px;
+                margin-left: auto;
+
+            }
+        }
+    </style>
+</head>
+<!-- End of the head section-->
+
+<body>
+    <!--Start Header section-->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="navbar-brand">
+                <!-- <a href="#"><img src="./img/logo.png" alt="fitnfine"></a> -->
+                <div class="logo">
+                    <div class="barbell-sharp" aria-hidden="true"> <img src="Glassmorphism\Img\class-icon-1.png"></div>
+                    <div class="span">Fit.n.Fine</div>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto" style="margin: auto;">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Glassmorphism\about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Glassmorphism\blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Fitness
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="physicalfitness/physicalfitness.html">Physical Fitness</a>
+                            <a class="dropdown-item" href="mentalfitness\mentalfitness.html">Mental Fitness</a>
+                            <a class="dropdown-item" href="Glassmorphism\food1.html">Nutrition</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="buttons" style="margin: auto;">
+                    <input type="button" value="Login" onclick="window.location.href = 'Glassmorphism/signin1.html';">
+                    <input type="button" value="Register"
+                        onclick="window.location.href = 'Glassmorphism/signup1.html';">
+                </div>
+            </div>
+        </nav>
+        <section class="contact-section py-5">
+            <div class="container" >
+                <h2 class="text-center mb-5">Get in Touch</h2>
+                <div class="row" >
+                    <div class="col-lg-8 mx-auto"  style="border: 5px solid #F6416C; border-radius: 30px;margin-bottom: 250px;">
+                        <form>
+                            <br>
+                            <div class="form-group">
+                                <label for="name"><b>Name</b></label>
+                                <input type="text" class="form-control" id="name" placeholder="Your Name">
+                            </div><br>
+                            <div class="form-group">
+                                <label for="email"><b>Email</b></label>
+                                <input type="email" class="form-control" id="email" placeholder="youremail@example.com">
+                            </div><br>
+                            <div class="form-group">
+                                <label for="subject"><b>Subject</b></label>
+                                <input type="text" class="form-control" id="subject" placeholder="Subject">
+                            </div><br>
+                            <div class="form-group">
+                                <label for="message"><b>Message</b></label>
+                                <textarea class="form-control" id="message" rows="4"
+                                    placeholder="Write your message here..."></textarea><br>
+
+                                <div class="form-group text-center">
+                                    <button type="submit" class="btn btn-primary send-btn" style="border-radius: 10px; background-color: #F6416C; margin-bottom: 20px;">Send Message</button>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer style="position: relative;background-color: azure;">
+            <div class="container-fluid bg-dark-subtle p-3" >
+                <div class="row text-left">
+                    <div class="col-md-5 col-sm-5">
+                        <h4 class="text-dark">About us</h4>
+                        <p class="text-muted"><b> Fit N Fine</b> is your trusted partner in fitness and well-being.We're
+                            dedicated
+                            to empowering individuals to live healthier lifestyles.
+                            Our team crafts tailored programs to meet every fitness goal.</p>
+                        <p class="pt-4 text-muted">Copyright ©2023 All rights reserved
+                            <span> Fit N Fine</span>
+                        </p>
+                    </div>
+                    <div class="col-md-5 col-sm-12">
+                        <h4 class="text-dark">Newsletter</h4>
+                        <p class="text-muted">Stay Updated</p>
+                        <form class="form-inline">
+                            <div class="col pl-0">
+                                <div class="input-group pr-5">
+                                    <input type="text" class="form-control bg-dark text-white"
+                                        id="inlineFormInputGroupUsername2" placeholder="Email">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="bi bi-arrow-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-2 col-sm-12">
+                        <h4 class="text-dark">Follow Us</h4>
+                        <p class="text-muted">Let us be social</p>
+                        <div class="column text-dark">
+                            <a href="#" aria-label="facebook" class="text-dark"><i class="bi bi-facebook mx-1"></i></a>
+                            <a href="#" aria-label="instagram" class="text-dark"><i
+                                    class="bi bi-instagram mx-1"></i></a>
+                            <a href="#" aria-label="twitter" class="text-dark"><i class="bi bi-twitter-x mx-1"></i></a>
+                            <a href="#" aria-label="youtube" class="text-dark"> <i class="bi bi-youtube mx-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>

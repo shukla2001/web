@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fit N Fine</title>
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="Img\FIT.png">
+
+  <!--Boostrap Css File Link-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- or
+        
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    -->
+
+  <!--Custom  Css File Link-->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body{
+      background-color: #f4eded;
+    }
+    .navbar {
+      height: 69px;
+      margin-right: 30px;
+      margin-left: 30px;
+      border-radius: 25px;
+      display: flex;
+      justify-content: space-between;
+
+    }
+
+
+    /* .navbar .collapse{
+      
+        margin-left: auto;
+        display: flex;
+        flex-wrap: wrap;
+      }  */
+
+
+    .logo {
+      display: flex;
+
+    }
+
+    .logo .span {
+      color: #F6416C;
+      font-family: var(--ff-catamaran);
+      font-size: 2.5rem;
+      font-weight: var(--fw-900);
+
+    }
+
+    .logo .barbell-sharp {
+
+      pointer-events: none;
+      font-size: 30px;
+      /* transform: rotate(90deg) translate(-2px, -5px); */
+    }
+
+    .navbar .navbar-nav .nav-item {
+      list-style: none;
+      margin: 0px 0px;
+    }
+
+    .navbar .navbar-nav a {
+      color: #000;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 500;
+      /* transition: all 0.3s ease; */
+    }
+
+    .navbar .navbar-nav a:hover {
+      color: #f2f2f2;
+    }
+
+    .navbar .buttons input {
+      outline: none;
+      color: #fffbfb;
+      font-size: 18px;
+      font-weight: 500;
+      border-radius: 12px;
+      padding: 6px 10px;
+      border: none;
+      margin: 0 2px;
+      cursor: pointer;
+      /* transition: all 0.3s ease; */
+      background-image: linear-gradient(135deg, #ff9a9e 10%, #F6416C 100%);
+    }
+
+    .navbar .buttons input:hover {
+      transform: scale(0.97);
+    }
+
+    @media (max-width:850px) {
+      .navbar .navbar {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 5px;
+      }
+
+      .navbar .menu {
+        margin: 10px 0 20px 0;
+      }
+
+      header .text-content {
+        margin: 30px 0 0 20px;
+        width: 70%;
+      }
+
+      header .text-content h2 {
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width:390px) {
+
+      body {
+        height: 220vh;
+      }
+
+      header {
+
+        width: 80%;
+        border-radius: 10px;
+      }
+
+
+    }
+  </style>
+</head>
+<!-- End of the head section-->
+
+<body>
+  <!--Start Header section-->
+  <header style="height: 70px;">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="navbar-brand">
+        <!-- <a href="#"><img src="./img/logo.png" alt="fitnfine"></a> -->
+        <div class="logo">
+          <div class="barbell-sharp" aria-hidden="true"> <img src="Img\class-icon-1.png"></div>
+          <div class="span">Fit.n.Fine</div>
+        </div>
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto" style="margin: auto;">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Glassmorphism\about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Glassmorphism\blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Fitness
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="physicalfitness\physicalfitness.html">Physical Fitness</a>
+              <a class="dropdown-item" href="mentalfitness\mentalfitness.html">Mental Fitness</a>
+              <a class="dropdown-item" href="Glassmorphism\food1.html">Nutrition</a>
+            </div>
+          </li>
+        </ul>
+        <div class="buttons" style="margin: auto;">
+          <input type="button" value="Login" onclick="window.location.href = 'Glassmorphism/signin1.html';">
+          <input type="button" value="Register" onclick="window.location.href = 'Glassmorphism/signup1.html';">
+        </div>
+      </div>
+    </nav>
+    <!-- <div class="conatiner-fluid" p-0>
+        <nav class="navbar navbar-expand-lg">
+            
+              <a class="navbar-brand" href="#">Fit N Fine</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Fitness</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link btn btn-transparent border-black text-black" href="#">Login</a>
+              </li>
+              <li class="nav-item ml-2">
+                  <a class="nav-link btn btn-primary" href="#">Sign Up</a>
+              </li>
+                </ul>
+              </div>
+            </nav>
+        </div> -->
+  </header>
+  <header>
+    <!--End of Nav Bar-->
+    <div class="container text-center" >
+      <div class="row">
+        <div class="col-md-7 col-sm-3" >
+          <h6>your first step towards the healthy life...</h6>
+          <h1>Embrace Your Fitness Journey</h1>
+          <p>
+            At Fit N Fine, we believe in the power of transformation.
+            Dive into a tailored experience to elevate your well-being.
+          </p>
+          <button class="btn btn-light px-5 py-2 primary-btn"><a href="Glassmorphism/signup1.html">Join today</a></button>
+          <button class="btn btn-light text-bg-dark px-5 py-2 secondary-btn border border-dark"><a href="Glassmorphism/about.html">More</a></button>
+        </div>
+        <div class="col-md-5 col-sm-12 d-flex justify-content-end align-items-center">
+          
+        <img src="Img\Healthy habit-bro (1).svg" alt="Main_Image" class="mr-3" style="height: 70%;margin-bottom: 250px;" />
+        </div>
+      </div>
+    </div>
+    <!--End of banner image or main image and end of header-->
+  </header>
+  <main>
+
+    <section class="section-2 container-fluid p-0" >
+      <div class="cover">
+          <div class="overlay"></div>
+          <div class="content text-center">
+              <h1>What makes us unique?</h1>
+              <p><b>
+                  At Fit N Fine, we are more than just a fitness center. Our dedicated team provides comprehensive services<br>
+                  and consultations tailored to your physical, mental, and nutritional needs.
+              </b></p>
+          </div>
+      </div>
+      <div class="container-fluid text-center mt-5">
+          <div class="row justify-content-center">
+              <div class="col-md-4">
+                  <div class="card card-hover mb-4 text-center" style="min-height: 250px;">
+                      <img class="mx-auto d-block my-3" src="Img\dumbell.png" style="width:100px;" alt="Physical Fitness Graphic">
+                      <div class="card-body">
+                          <h5 class="card-title"><a href=".\physicalfitness/physicalfitness.html">Physical Fitness</a></h5>
+                          <!-- <p class="card-text">Happy Client</p> -->
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="card card-hover mb-4  text-center" style="min-height: 250px;">
+                      <img class="mx-auto d-block my-3" src="Img\mental-health.png" style="width:80px;" alt="Mental Fitness Graphic"> <!-- Vector graphic placeholder -->
+                      <div class="card-body">
+                          <h5 class="card-title"><a href="mentalfitness\mentalfitness.html">Mental Fitness</a></h5>
+                          <!-- <p class="card-text">sas</p> -->
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="card card-hover mb-4 text-center" style="min-height: 250px;">
+                      <img class="mx-auto d-block my-3" src="Img\nutrition.png" style="width:60px;"  alt="Nutrition Graphic"> <!-- Vector graphic placeholder -->
+                      <div class="card-body">
+                          <h5 class="card-title"><a href=".\Glassmorphism/food1.html">Nutrition</a></h5>
+                          <p class="card-text"></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    <div class="blogg text-center">
+        <h1>Stay Updated with Our Blogs</h1>
+        <p><b>
+          Dive into our blog at Fit N Fine, where we share insights, tips, and stories crafted for your holistic
+          well-being journey.<br>From fitness routines and mental wellness strategies to nutritional advice, discover 
+          content that empowers and inspires.<b>
+        </p>
+       <!--blog content-->
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+          <!-- First Card -->
+          <div class="col-md-4">
+              <div class="card">
+                  <div class="card-body">
+                      <div class="title">
+                          <h5 class="card-title">Begin your fitness exploration</h5>
+                      </div>
+                  </div>
+                  <p class="card-text">
+                      Explore more about fitness.
+                  </p>
+                  <div class="pricing">
+                      <a href="Glassmorphism/blog.html" class="btn btn-dark px-5 py-2 primary-btn mb-5">Read Now</a>
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Second Card -->
+          <div class="col-md-4">
+              <div class="card">
+                  <div class="card-body">
+                      <div class="title">
+                          <h5 class="card-title">How to imporve you mental Health</h5>
+                      </div>
+                  </div>
+                  <p class="card-text">
+                      Explore more about fitness.
+                  </p>
+                  <div class="pricing">
+                      <a href="Glassmorphism/blog.html" class="btn btn-dark px-5 py-2 primary-btn mb-5">Read Now</a>
+                  </div>
+              </div>
+          </div>
+    </section>
+
+ <!--Testimonial section starts here-->
+ <div class="blogg text-center">
+  <h1>What our Members Say About Us?</h1>
+  <h4>
+    Get to know from the people who have used our services
+  </h4>
+  </div>
+
+
+  <section class="container my-5">
+    <div class="row justify-content-center">
+        <!-- First Testimonial -->
+        <div class="col-md-4 mb-4">
+            <div class="card p-3 shadow-sm">
+                <div class="text-center">
+                    <img src="Img\head.png" alt="kiran" class="rounded-circle img-fluid mb-3" style="width: 80px;">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title text-center">Kiran</h4>
+                    <p class="text-muted text-center mb-3">Software Developer</p>
+                    <p class="mb-0">"Ever since I joined Fit N Fine, my perspective on fitness has completely transformed. 
+                      It's not just about the physical appearance but the holistic well-being that they emphasize. 
+                      Truly a game-changer in the fitness industry!"</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Second Testimonial -->
+        <div class="col-md-4 mb-4">
+            <div class="card p-3 shadow-sm">
+                <div class="text-center">
+                    <img src="Img\woman.png" alt="Sara" class="rounded-circle img-fluid mb-3" style="width: 80px;">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title text-center">Sara</h4>
+                    <p class="text-muted text-center mb-3">Teacher</p>
+                    <p class="mb-0">"Joining Fit N Fine is one of the best decisions I've ever made. Their community spirit, 
+                      combined with top-notch equipment and expert advice, provides a wholesome fitness experience. 
+                      Highly recommended!"</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Third Testimonial -->
+        <div class="col-md-4 mb-4">
+            <div class="card p-3 shadow-sm">
+                <div class="text-center">
+                    <img src="Img\model.png" alt="peter" class="rounded-circle img-fluid mb-3" style="width: 80px;">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title text-center">Peter</h4>
+                    <p class="text-muted text-center mb-3">Sales Manager</p>
+                    <p class="mb-0">"Fit N Fine's programs are meticulously crafted, keeping in mind individual strengths and weaknesses. 
+                      I've never felt more in tune with my body. Their trainers are knowledgeable and always available for guidance."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+    <!--Section 4 Starts Here-->
+
+
+    <header>
+      <!--End of Nav Bar-->
+      <div class="container text-center" >
+        <div class="row">
+          <div class="col-md-7 col-sm-3" >
+            <h6>your first step towards the healthy life...</h6>
+
+            <h1 class="text-dark" style="font-size: 32px;">Want to Contact Us for suggestions ?</h1>
+
+            <button class="btn btn-light px-5 py-2 primary-btn"><a href="contact.html">Contact US</a></button>
+          </div>
+          <div class="col-md-5 col-sm-12 d-flex justify-content-end align-items-center">
+            
+          <img src="Img\undraw_personal_email_re_4lx7 (1).svg" alt="Main_Image" class="mr-3" style="height: 70%;margin-bottom: 250px;" />
+          </div>
+        </div>
+      </div>
+      <!--End of banner image or main image and end of header-->
+    </header>
+
+
+  <!-- <div  style="display: flex; margin-left: 500px;">
+    <section class="section-3 container-fluid p-0 text-center">
+      <div class="row">
+        <div class="col-md-12 col-sm-12" style="margin-right: 500px;">
+          <h1 class="text-dark" style="font-size: 32px;">Want to Contact Us for suggestions ?</h1>
+        </div>
+        <div class="pricing">
+
+          <a href="contact.html" class="btn btn-dark px-5 py-2 primary-btn mb-5">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <div style="margin-right: 3px;">      
+      <img src="undraw_personal_email_re_4lx7 (1).svg" alt="Main_Image" class="mr-3" style="height: 45%;" />
+    </div>
+  </div>
+  </main> -->
+
+
+  <!--main Ends header-->
+
+  <!--Start of the footer section-->
+  <footer >
+    <div class="container-fluid bg-dark-subtle p-3">
+      <div class="row text-left">
+        <div class="col-md-5 col-sm-5">
+          <h4 class="text-dark">About us</h4>
+          <p class="text-muted"><b> Fit N Fine</b> is your trusted partner in fitness and well-being.We're
+            dedicated
+            to empowering individuals to live healthier lifestyles.
+            Our team crafts tailored programs to meet every fitness goal.</p>
+          <p class="pt-4 text-muted">Copyright ©2023 All rights reserved
+            <span> Fit N Fine</span>
+          </p>
+        </div>
+        <div class="col-md-5 col-sm-12">
+          <h4 class="text-dark">Newsletter</h4>
+          <p class="text-muted">Stay Updated</p>
+          <form class="form-inline">
+            <div class="col pl-0">
+              <div class="input-group pr-5">
+                <input type="text" class="form-control bg-dark text-white" id="inlineFormInputGroupUsername2"
+                  placeholder="Email">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="bi bi-arrow-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-2 col-sm-12">
+          <h4 class="text-dark">Follow Us</h4>
+          <p class="text-muted">Let us be social</p>
+          <div class="column text-dark">
+            <a href="#" aria-label="facebook" class="text-dark"><i class="bi bi-facebook mx-1"></i></a>
+            <a href="#" aria-label="instagram" class="text-dark"><i class="bi bi-instagram mx-1"></i></a>
+            <a href="#" aria-label="twitter" class="text-dark"><i class="bi bi-twitter-x mx-1"></i></a>
+            <a href="#" aria-label="youtube" class="text-dark"> <i class="bi bi-youtube mx-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!--End of the footer section-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

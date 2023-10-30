@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit N Fine - Your Path to Physical Fitness</title>
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="..\Img\FIT.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="physicalfitness.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <style>
+        .navbar {
+            /* margin: auto; */
+            /* position: fixed; */
+            width: 95%;
+            opacity: 50px;
+            /* padding: 35px 10px; */
+            margin: 0 0px 10px 30px;
+            border-radius: 25px;
+            display: flex;
+            justify-content: space-between;
+            /* align-items: center; */
+        }
+
+
+        /* .navbar .collapse{
+        
+          margin-left: auto;
+          display: flex;
+          flex-wrap: wrap;
+        }  */
+
+
+        .logo {
+            display: flex;
+
+        }
+
+        .logo .span {
+            color: #F6416C;
+            font-family: var(--ff-catamaran);
+            font-size: 2.5rem;
+            font-weight: var(--fw-900);
+            display: flex;
+            align-items: center;
+            margin-left: 6px;
+        }
+
+        .logo .barbell-sharp {
+            margin-left: 10px;
+            pointer-events: none;
+            font-size: 30px;
+            /* transform: rotate(90deg) translate(-2px, -5px); */
+        }
+
+        .navbar .navbar-nav .nav-item {
+            list-style: none;
+            margin: 0 6px;
+        }
+
+        .navbar .navbar-nav a {
+            color: #000;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 500;
+            /* transition: all 0.3s ease; */
+        }
+
+        .navbar .navbar-nav a:hover {
+            color: #f2f2f2;
+        }
+
+        .navbar .buttons input {
+            outline: none;
+            color: #fffbfb;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 12px;
+            padding: 6px 15px;
+            border: none;
+            margin: 0 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background-image: linear-gradient(135deg, #ff9a9e 10%, #F6416C 100%);
+        }
+
+        .navbar .buttons input:hover {
+            transform: scale(0.97);
+        }
+
+        @media (max-width:850px) {
+            .navbar .navbar {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 15px 5px;
+            }
+
+            .navbar .menu {
+                margin: 10px 0 20px 0;
+            }
+
+            header .text-content {
+                margin: 30px 0 0 20px;
+                width: 70%;
+            }
+
+            header .text-content h2 {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width:390px) {
+            body {
+                height: 220vh;
+            }
+
+            header {
+                height: 80vh;
+                width: 80%;
+                border-radius: 10px;
+            }
+
+            .navbar {
+                width: 85%;
+            }
+
+            .navbar .collapse {
+                margin-right: 10px;
+                margin-left: auto;
+
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="navbar-brand">
+                <!-- <a href="#"><img src="./img/logo.png" alt="fitnfine"></a> -->
+                <div class="logo">
+                    <div class="barbell-sharp" aria-hidden="true"> <img src="images\class-icon-1.png"></div>
+                    <div class="span">Fit.n.Fine</div>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto" style="margin: auto;">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="..\Glassmorphism\about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="..\Glassmorphism\blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="..\contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Fitness
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item active" href="#">Physical Fitness</a>
+                            <a class="dropdown-item" href="../mentalfitness/mentalfitness.html">Mental Fitness</a>
+                            <a class="dropdown-item" href="../Glassmorphism\food1.html">Nutrition</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="buttons" style="margin: auto;">
+                    <input type="button" value="Login"
+                        onclick="window.location.href = '../Glassmorphism/signin1.html';">
+                    <input type="button" value="Register"
+                        onclick="window.location.href = '../Glassmorphism/signup1.html';">
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#" aria-label="Fit N Fine homepage">Fit N Fine</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#links"
+                    aria-controls="links" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="links">
+                    <ul class="navbar-nav ms-auto me-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="fitnesslinks" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Fitness
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="fitnesslinks">
+                                <li><a class="dropdown-item" aria-current="page" href="#">Physical</a></li>
+                                <li><a class="dropdown-item" href="\mentalfitness/mentalfitness.html">Mental</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Nutrition</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-0" href="#"><button type="button"
+                                    class="btn btn-info bg-primary border rounded-pill ">Sign up/Sign
+                                    in</button></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav> -->
+    </header>
+
+
+    <p style="font-size: x-small; margin-left: 5rem;" class="fst-italic"> <u><a href="#content"
+                style="text-decoration: none; color:grey;">Skip to content</a> </u></p>
+
+    <h2 class="fitness">
+        FITNESS
+    </h2>
+
+    <div class="bg">
+        <h1 class="exer">EXERCISES</h1>
+    </div>
+
+    <section class="container info bg-white position-relative p-4 ">
+        <h3 class="text-center">Unlock Your Potential</h3>
+        <p>
+            Welcome to a world of limitless possibilities. You hold the key to unlocking your full potential, and it
+            all begins right here. The journey to a healthier, stronger, and happier you starts with a single step,
+            one push-up, one squat, one stretch at a time. Embrace the power within you, and let it propel you
+            towards your fitness goals. Let's get moving, let's get inspired,
+            and let's make every workout count. You're not just exercising; you're investing in yourself, building a
+            brighter future, and becoming the best 'you' possible. Start now, and watch yourself transform into a
+            stronger, more confident, and unstoppable force. The journey is challenging, but the rewards are
+            limitless. It's time to unleash your potential.
+            <br>
+            <b>
+                These exercises are your path to progress, your tools to transform, and your secret to a healthier,
+                happier you. Take the first step and incorporate them into your routine, and you'll be amazed at the
+                strength and resilience you'll build.</b>
+        </p>
+        </p>
+    </section>
+
+    <div class="vert d-none d-lg-inline-block position-absolute">
+        <span class="stay">STAY</span>
+        <span class="fit">FIT</span>
+        <span class="n">N</span>
+        <span class="fine">FINE</span>
+
+    </div>
+
+
+    <section class="container pt-4 pb-4 p-4" id="content">
+        <div class="row d-flex justify-content-center ">
+            <div class="col-sm-10 col-md-8  accordion p-0 rounded-3 here">
+                <button id="here" class="accordion-button border border-black-subtle rounded-3 collapsed"
+                    data-bs-toggle="collapse" type="button" data-bs-target="#plank" aria-expanded="false"
+                    aria-controls="plank-exercise">
+                    <img src="images/4.png" class="img-fluid mx-4" height="50px" width="100px"
+                        alt="Image of plank exercise">
+                    <p>
+                        PLANK
+                    </p>
+                </button>
+
+                <div class="collapse  rounded-3" id="plank">
+                    <div class="mt-2 container border bg-white border-dark-subtle rounded-3">
+                        <video class="ratio ratio-16x9" height="300px" width="300px" autoplay muted loop
+                            poster="/images/4.png">
+                            <source src="vids/4 animated.mp4" type="video/ogg">
+                            <p>Demonstration of plank exercise</p>
+                        </video>
+                        <hr>
+                        <div class="container">
+                            <h4 class="h4">PLANK</h4>
+                            Lie on the floor with your toes and forearms on the ground.
+                            Keep your body straight and hold this position as long as you can.
+                            <br>
+                            This exercise strengthens the abdomen, back and shoulders.
+                            <hr>
+                            <div class="my-3 text-start">
+                                <h6>FOCUS AREA</h6>
+                                <button type="button"
+                                    class="btn btn-info bg-primary border rounded-pill m-2 ">Abs</button>
+                                <button type="button"
+                                    class="btn btn-info bg-primary-subtle border rounded-pill m-2">Glutes</button>
+                                <button type="button"
+                                    class="btn btn-info bg-primary-subtle border rounded-pill m-2">Hamstring</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row d-flex justify-content-center mt-4 ">
+            <div class="col-sm-10 col-md-8  accordion  p-0 rounded-3">
+                <button id="here" class="accordion-button border border-black-subtle rounded-3 collapsed"
+                    data-bs-toggle="collapse" type="button" data-bs-target="#jumpjack" aria-expanded="false"
+                    aria-controls="jumpjack">
+                    <img src="images/1.png" class="img-fluid mx-4" height="50px" width="100px"
+                        alt="Image of jumping jack exercise">
+                    <p>
+                        JUMPING JACKS
+                    </p>
+                </button>
+
+                <div class="collapse rounded-3" id="jumpjack">
+                    <div class="mt-2 container border bg-white border-dark-subtle rounded-3">
+                        <video id="vid" class="ratio ratio-16x9" height="300px" width="300px" autoplay muted loop
+                            poster="/images/1.png">
+                            <source src="vids/1 animated.mp4" type="video/ogg">
+                            <p>Video demonstration of jumping jacks exercise</p>
+                        </video>
+                        <hr>
+                        <div class="container">
+                            <h4>JUMPING JACKS</h4>
+                            Start with you feet together and your arms by your sides,
+                            then jump up with your feet apart and your hands overhead.
+                            <br>
+                            Return to the start position then do the next rep.
+                            This exercise provides a full-body workout and works all your large muscle groups.
+                            <hr>
+                            <div class="my-3 text-start">
+                                <h6>FOCUS AREA</h6>
+                                <button type="button"
+                                    class="btn btn-info bg-primary border rounded-pill  m-2">Shoulders</button>
+                                <button type="button"
+                                    class="btn btn-info bg-primary border rounded-pill  m-2">Quadriceps</button>
+                                <button type="button"
+                                    class="btn btn-info bg-primary border rounded-pill m-2">Adductors</button>
+
+                                <button type="button"
+                                    class="btn btn-info bg-primary-subtle border rounded-pill  m-2 ">Chest</button>
+                                <button type="button"
+                                    class="btn btn-info bg-primary-subtle border rounded-pill  m-2">Glutes</button>
+                                <button type="button"
+                                    class="btn btn-info bg-primary-subtle border rounded-pill m-2">Calves</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row d-flex justify-content-center mt-4 ">
+            <div class="col-sm-10 col-md-8  accordion p-0 rounded-3">
+                <button id="here" class="accordion-button border border-black-subtle rounded-3 collapsed"
+                    data-bs-toggle="collapse" type="button" data-bs-target="#abdomcrunch" aria-expanded="false"
+                    aria-controls="abdomcrunch">
+                    <img src="images/2.png" class="img-fluid mx-4" height="50px" width="100px"
+                        alt="Image of abdominal crunches">
+                    <p>
+                        ABDOMINAL CRUNCHES
+                    </p>
+                </button>
+
+                <div class="collapse rounded-3" id="abdomcrunch">
+                    <div class="mt-2 container border bg-white border-dark-subtle rounded-3">
+                        <video id="vid" class="ratio ratio-16x9" height="300px" width="300px" autoplay muted loop
+                            poster="/images/2.png">
+                            <source src="vids/2 animated.mp4" type="video/ogg">
+                            <p>Video demonstration of abdominal crunches exercise</p>
+                        </video>
+                        <hr>
+                        <div class="container">
+                            <h4>ABDOMINAL CRUNCHES</h4>
+                            Lie on your back with your knees bent and your arms stretched forward.
+                            <br>
+                            Then lift your upper body off the floor. Hold for a few seconds and slowly return.
+
+                            It primarily works the rectus abdominis muscle and the obliques.
+                            <hr>
+                            <div class="my-3 text-start">
+                                <h6>FOCUS AREA</h6>
+                                <button type="button"
+                                    class="btn btn-info bg-primary border rounded-pill m-2">Abs</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row d-flex justify-content-center mt-4 ">
+            <div class="col-sm-10 col-md-8  accordion  p-0 rounded-3">
+                <button id="here" class="accordion-button border border-black-subtle rounded-3 collapsed"
+                    data-bs-toggle="collapse" type="button" data-bs-target="#mtnclimbr" aria-expanded="false"
+                    aria-controls="mtnclimbr">
+                    <img src="images/3.png" class="img-fluid mx-4" height="50px" width="100px"
+                        alt="Image of mountain climber exercise">
+                    <p>
+                        MOUNTAIN CLIMBER
+                    </p>
+                </button>
+
+                <div class="collapse rounded-3" id="mtnclimbr">
+                    <div class="mt-2 container border bg-white border-dark-subtle rounded-3">
+                        <video id="vid" class="ratio ratio-16x9" height="300px" width="300px" autoplay muted loop
+                            poster="/images/3.png">
+                            <source src="vids/3 animated.mp4" type="video/ogg">
+                            <p>Video demonstration of mountain climber exercise</p>
+                        </video>
+                        <hr>
+                        <div class="container">
+                            <h4>MOUNTAIN CLIMBER</h4>
+                            Start in the push-up position. Bend your right knee towards your chest and keep your
+                            left
+                            leg straight,
+                            then quickly switch from one leg to the other.
+                            <br>
+
+                            This exercise strengthens multiple muscle groups.
+                            <hr>
+                            <div class="my-3 text-start">
+                                <h6>FOCUS AREA</h6>
+                                <button type="button"
+                                    class="btn btn-info bg-primary border rounded-pill m-2">Abs</button>
+                                <button type="button"
+                                    class="btn btn-info bg-primary border rounded-pill m-2">Quadriceps</button>
+                                <button type="button" class="btn btn-info bg-primary border rounded-pill mx-2">Lower
+                                    back</button>
+                                <button type="button"
+                                    class="btn btn-info bg-primary border rounded-pill m-2">Glutes</button>
+                                <button type="button"
+                                    class="btn btn-info bg-primary border rounded-pill m-2">Calves</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row d-flex justify-content-center mt-4 ">
+            <div class="col-sm-10 col-md-8  accordion  p-0 rounded-3">
+                <button id="here" class="accordion-button border border-black-subtle rounded-3 collapsed"
+                    data-bs-toggle="collapse" type="button" data-bs-target="#shoulderstretch" aria-expanded="false"
+                    aria-controls="shoulderstretch">
+                    <img src="images/5.png" class="img-fluid mx-4" height="50px" width="100px"
+                        alt="Image of shoulder stretch exercise">
+                    <p>
+                        SHOULDER STRETCH
+                    </p>
+                </button>
+
+                <div class="collapse rounded-3" id="shoulderstretch">
+                    <div class="mt-2 container border bg-white border-dark-subtle rounded-3">
+                        <video id="vid" class="ratio ratio-16x9" height="300px" width="300px" autoplay muted loop
+                            poster="/images/5.png">
+                            <source src="vids/5 animated.mp4" type="video/ogg">
+                            <p>Video demonstration of shoulder stretch exercise</p>
+                        </video>
+                        <hr>
+                        <div class="container">
+                            <h4>SHOULDER STRETCH</h4>
+                            Place one arm across your body, parallel to the ground, then use the other arm to pull
+                            the
+                            parallel arm toward your chest.
+                            <br>
+                            Hold for a while, switch arms and repeat the exercise. Keep the inside arm straight
+                            during
+                            the exercise.
+                            <hr>
+                            <div class="my-3 text-start">
+                                <h6>FOCUS AREA</h6>
+                                <button type="button"
+                                    class="btn btn-info bg-primary border rounded-pill m-2">Shoulders</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row d-flex justify-content-center mt-4 ">
+            <div class="col-sm-10 col-md-8  accordion  p-0 rounded-3">
+                <button id="here" class="accordion-button border border-black-subtle rounded-3 collapsed"
+                    data-bs-toggle="collapse" type="button" data-bs-target="#pushup" aria-expanded="false"
+                    aria-controls="pushup">
+                    <img src="images/6.png" class="img-fluid mx-4" height="50px" width="100px"
+                        alt="Image of push-up exercise">
+                    <p>
+                        PUSH-UPS
+                    </p>
+                </button>
+
+                <div class="collapse rounded-3" id="pushup">
+                    <div class="mt-2 container border bg-white border-dark-subtle rounded-3">
+                        <video id="vid" class="ratio ratio-16x9" height="300px" width="300px" autoplay muted loop
+                            poster="/images/6.png">
+                            <source src="vids/6 animated.mp4" type="video/ogg">
+                            <p>Video demonstration of push-up exercise</p>
+
+                        </video>
+                        <hr>
+                        <div class="container">
+                            <h4>PUSH-UPS</h4>
+                            Lay prone on the ground with arms supporting your body.
+                            Keep your body straight while raising and lowering your body with your arms.
+
+                            <br>
+                            This exercise works the chest, shoulders, triceps , back and legs.
+                            <hr>
+                            <div class="my-3 text-start">
+                                <h6>FOCUS AREA</h6>
+                                <button type="button"
+                                    class="btn btn-info bg-primary border rounded-pill m-2">Chest</button>
+                                <button type="button"
+                                    class="btn btn-info bg-primary-subtle border rounded-pill m-2">Triceps</button>
+                                <button type="button"
+                                    class="btn btn-info bg-primary-subtle border rounded-pill m-2">Shoulders</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <footer>
+        <div class="container-fluid p-3 bg-dark-subtle">
+            <div class="row text-left">
+                <div class="col-md-5 col-sm-5">
+                    <h4 class="text-dark">About us</h4>
+                    <p class="text-muted"><b> Fit N Fine</b> is your trusted partner in fitness and well-being.We're
+                        dedicated
+                        to empowering individuals to live healthier lifestyles.
+                        Our team crafts tailored programs to meet every fitness goal.</p>
+                    <p class="pt-4 text-muted">Copyright ©2023 All rights reserved
+                        <span> Fit N Fine</span>
+                    </p>
+                </div>
+                <div class="col-md-5 col-sm-12">
+                    <h4 class="text-dark">Newsletter</h4>
+                    <p class="text-muted">Stay Updated</p>
+                    <form class="form-inline">
+                        <div class="col pl-0">
+                            <div class="input-group pr-5">
+                                <input type="text" class="form-control bg-dark text-white"
+                                    id="inlineFormInputGroupUsername2" placeholder="Email">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="bi bi-arrow-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-2 col-sm-12">
+                    <h4 class="text-dark">Follow Us</h4>
+                    <p class="text-muted">Let us be social</p>
+                    <div class="column text-dark">
+                        <a href="#" aria-label="facebook" class="text-dark"><i class="bi bi-facebook mx-1"></i></a>
+                        <a href="#" aria-label="instagram" class="text-dark"><i class="bi bi-instagram mx-1"></i></a>
+                        <a href="#" aria-label="twitter" class="text-dark"><i class="bi bi-twitter-x mx-1"></i></a>
+                        <a href="#" aria-label="youtube" class="text-dark"> <i class="bi bi-youtube mx-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

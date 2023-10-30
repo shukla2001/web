@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit N Fine - Your Path to Mental Fitness</title>
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="..\Img\FIT.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="mentalfitness.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <style>
+        .navbar {
+            /* margin: auto; */
+            /* position: fixed; */
+            width: 95%;
+            opacity: 50px;
+            /* padding: 35px 10px; */
+            margin: 0 0px 10px 30px;
+            border-radius: 25px;
+            display: flex;
+            justify-content: space-between;
+            /* align-items: center; */
+        }
+
+
+        /* .navbar .collapse{
+        
+          margin-left: auto;
+          display: flex;
+          flex-wrap: wrap;
+        }  */
+
+
+        .logo {
+            display: flex;
+
+        }
+
+        .logo .span {
+            color: #F6416C;
+            font-family: var(--ff-catamaran);
+            font-size: 2.5rem;
+            font-weight: var(--fw-900);
+            display: flex;
+            align-items: center;
+            margin-left: 4px;
+        }
+
+        .logo .barbell-sharp {
+            margin-left: 10px;
+            pointer-events: none;
+            font-size: 30px;
+            /* transform: rotate(90deg) translate(-2px, -5px); */
+        }
+
+        .navbar .navbar-nav .nav-item {
+            list-style: none;
+            margin: 0 6px;
+        }
+
+        .navbar .navbar-nav a {
+            color: #000;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 500;
+            /* transition: all 0.3s ease; */
+        }
+
+        .navbar .navbar-nav a:hover {
+            color: #f2f2f2;
+        }
+
+        .navbar .buttons input {
+            outline: none;
+            color: #fffbfb;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 12px;
+            padding: 6px 15px;
+            border: none;
+            margin: 0 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background-image: linear-gradient(135deg, #ff9a9e 10%, #F6416C 100%);
+        }
+
+        .navbar .buttons input:hover {
+            transform: scale(0.97);
+        }
+
+        @media (max-width:850px) {
+            .navbar .navbar {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 15px 5px;
+            }
+
+            .navbar .menu {
+                margin: 10px 0 20px 0;
+            }
+
+            header .text-content {
+                margin: 30px 0 0 20px;
+                width: 70%;
+            }
+
+            header .text-content h2 {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width:390px) {
+            body {
+                height: 220vh;
+            }
+
+            header {
+                height: 80vh;
+                width: 80%;
+                border-radius: 10px;
+            }
+
+            .navbar {
+                width: 85%;
+            }
+
+            .navbar .collapse {
+                margin-right: 10px;
+                margin-left: auto;
+
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="navbar-brand">
+                <!-- <a href="#"><img src="./img/logo.png" alt="fitnfine"></a> -->
+                <div class="logo">
+                    <div class="barbell-sharp" aria-hidden="true"> <img src="images\class-icon-1.png"></div>
+                    <div class="span">Fit.n.Fine</div>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto" style="margin: auto;">
+                    <ul class="navbar-nav mr-auto" style="margin: auto;">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="..\Glassmorphism\about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="..\Glassmorphism\blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="..\contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Fitness
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item " href="../physicalfitness/physicalfitness.html">Physical
+                                    Fitness</a>
+                                <a class="dropdown-item  active" href="#">Mental Fitness</a>
+                                <a class="dropdown-item" href="../Glassmorphism\food1.html">Nutrition</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="buttons" style="margin-left: 20vw;">
+                        <input type="button" value="Login"
+                            onclick="window.location.href = '../Glassmorphism/signin1.html';">
+                        <input type="button" value="Register"
+                            onclick="window.location.href = '../Glassmorphism/signup1.html';">
+                    </div>
+            </div>
+        </nav>
+        <!-- <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" aria-label="Fit N Fine homepage" href="#">Fit N Fine</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#links"
+                    aria-controls="links" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="links">
+                    <ul class="navbar-nav ms-auto me-3">
+                        <li class="nav-item">
+                            <a class="nav-link " href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="fitnesslinks" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Fitness
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="fitnesslinks">
+                                <li><a class="dropdown-item" href="\physicalfitness/physicalfitness.html">Physical</a></li>
+                                <li><a class="dropdown-item" aria-current="page" href="#">Mental</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Nutrition</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-0" href="#"><button type="button"
+                                    class="btn btn-info bg-primary border rounded-pill ">Sign up/Sign
+                                    in</button></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav> -->
+    </header>
+
+    <p style="font-size: x-small; margin-left: 5rem;" class="fst-italic"> <u><a href="#content"
+                style="text-decoration: none; color:grey;">Skip to content</a> </u></p>
+
+    <h2 class="mental">
+        MENTAL
+    </h2>
+
+    <div class="bg">
+
+        <h1 class="health">HEALTH</h1>
+    </div>
+
+
+    <section class="container mt-4">
+        <h2>Early Warning Signs & Symptoms</h2>
+        <p class="w-75">Not sure if you or someone you know is living with mental health problems?
+            <br> Experiencing one or more of the
+            following feelings or behaviors can be an early warning sign of a problem:
+        </p>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Eating or sleeping too much or too little</li>
+            <li class="list-group-item"> Pulling away from people and usual activities</li>
+            <li class="list-group-item">Having low or no energy</li>
+            <li class="list-group-item">Feeling numb or like nothing matters</li>
+            <li class="list-group-item">Feeling helpless or hopeless</li>
+            <li class="list-group-item">Smoking, drinking, or using drugs more than usual</li>
+            <li class="list-group-item">Feeling unusually confused, forgetful, on edge, angry, upset, worried, or scared
+            </li>
+            <li class="list-group-item">Yelling or fighting with family and friends</li>
+            <li class="list-group-item">Experiencing severe mood swings that cause problems in relationships</li>
+            <li class="list-group-item"> Having persistent thoughts and memories you can't get out of your head</li>
+            <li class="list-group-item">Hearing voices or believing things that are not true</li>
+            <li class="list-group-item">Thinking of harming yourself or others</li>
+            <li class="list-group-item">Inability to perform daily tasks like taking care of your kids or getting to
+                work or school</li>
+
+
+        </ul>
+    </section>
+
+
+
+
+    <div class="vert d-none d-lg-inline-block position-absolute">
+        <span class="stay">STAY</span>
+        <span class="fit">FIT</span>
+        <span class="n">N</span>
+        <span class="fine">FINE</span>
+
+    </div>
+
+    <div class="container my-4">
+        <h2>What can you do?</h2>
+    </div>
+
+    <div class="container-sm data" id="content">
+
+
+        <div class="row">
+
+
+            <div class="col-lg-6 p-4">
+                <div
+                    class="container text-bg-dark rounded-3 p-4 d-flex flex-column align-items-center justify-content-center h-100 ">
+                    <img src="images/anx.jpg" class="img-fluid rounded-3" width="500px"
+                        alt="Image of a person experiencing anxiety">
+
+                    <hr>
+                    <h2>Anxiety</h2>
+                    <p>When anxiety strikes, try deep breathing exercises, mindfulness, and grounding techniques to
+                        regain
+                        control of your thoughts and emotions. Seek therapy to identify and address the root causes of
+                        your
+                        anxiety.</p>
+                </div>
+            </div>
+
+
+            <div class="col-lg-6 p-4">
+                <div
+                    class="container text-bg-light border border-dark rounded-3 p-4 d-flex flex-column align-items-center justify-content-center h-100">
+                    <img src="images/depr.jpg" class="img-fluid rounded-3" width="500px"
+                        alt="Image of a person experiencing depression">
+
+                    <hr>
+                    <h2>Depression</h2>
+                    <p>Counteract depression by setting achievable daily goals, engaging in physical activity, and
+                        maintaining a
+                        routine. Reach out to friends and family for support and consider therapy or medication if
+                        necessary.
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="row">
+
+
+            <div class="col-lg-6 p-4">
+                <div
+                    class="container text-bg-dark rounded-3 p-4 d-flex flex-column align-items-center justify-content-center h-100">
+                    <img src="images/biplr.jpg" class="img-fluid rounded-3" width="500px"
+                        alt="Pictorial represation of a person with bipolar disorder">
+
+                    <hr>
+                    <h2>Bipolar Disorder</h2>
+                    <p>For bipolar disorder, adhere to prescribed medication regimens and therapy sessions. Keep a mood
+                        diary to
+                        monitor patterns and triggers, and involve loved ones in your treatment journey.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="col-lg-6 p-4">
+                <div
+                    class="container text-bg-light border border-dark rounded-3 p-4 d-flex flex-column align-items-center justify-content-center h-100 ">
+                    <img src="images/subst.jpg" class="img-fluid rounded-3" width="500px" height="200px"
+                        alt="Image of a person with substance addiction">
+
+                    <hr>
+                    <h2>Substance Abuse and Addiction</h2>
+                    <p>Begin your recovery journey with professional help in rehabilitation programs. Attend counseling
+                        and
+                        support groups for ongoing sobriety maintenance.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+
+
+            <div class="col-lg-6 p-4">
+                <div
+                    class="container text-bg-dark rounded-3 p-4 d-flex flex-column align-items-center justify-content-center h-100 ">
+                    <img src="images/stress.jpg" class="img-fluid rounded-3" width="500px"
+                        alt="Image of a person under stress">
+
+                    <hr>
+                    <h2>General Stress and Coping</h2>
+                    <p>Manage stress by practicing mindfulness, setting realistic goals, and maintaining a healthy
+                        work-life
+                        balance. Seek support from friends and loved ones, and don't hesitate to consult a therapist
+                        when
+                        needed.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="col-lg-6 p-4">
+                <div
+                    class="container text-bg-light rounded-3  border border-dark p-4 d-flex flex-column align-items-center justify-content-center h-100 ">
+                    <img src="images/lse.jpg" class="img-fluid rounded-3" width="500px"
+                        alt="Image of a person depicting low self esteem">
+
+                    <hr>
+                    <h2>Low Self-Esteem</h2>
+                    <p>Boost your self-esteem by focusing on self-compassion and practicing positive self-talk.
+                        Challenge negative
+                        beliefs about yourself, set achievable goals, and engage in activities that make you feel
+                        competent and
+                        valued.
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="row">
+
+
+            <div class="col-lg-6 p-4">
+                <div
+                    class="container text-bg-dark rounded-3 p-4 d-flex flex-column align-items-center justify-content-center h-100 ">
+                    <img src="images/proc.jpg" class="img-fluid rounded-3" width="500px"
+                        alt="Picture of piled up boxes represting procrastination">
+
+                    <hr>
+                    <h2>Procrastination</h2>
+                    <p>Overcome procrastination by breaking tasks into smaller, manageable steps and setting specific
+                        deadlines.
+                        Eliminate distractions, create a structured to-do list, and reward yourself for completing tasks
+                        on time.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="col-lg-6 p-4">
+                <div
+                    class="container text-bg-light border border-dark rounded-3 p-4 d-flex flex-column align-items-center justify-content-center h-100 ">
+                    <img src="images/anger.jpg" class="img-fluid rounded-3" width="500px"
+                        alt="Image of a person in anger">
+
+                    <hr>
+                    <h2>Anger Management</h2>
+                    <p>When dealing with anger, practice deep breathing and relaxation techniques. Develop effective
+                        communication skills to express your feelings constructively, and consider anger management
+                        counseling or therapy to address underlying issues.
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="row mb-5">
+
+            <div class="col-lg-6 p-4">
+                <div
+                    class="container text-bg-dark border border-dark rounded-3 p-4 d-flex flex-column align-items-center justify-content-center h-100 ">
+                    <img src="images/lonli.jpg" class="img-fluid rounded-3" width="500px"
+                        alt="Image of a lonly person in a forest">
+
+                    <hr>
+                    <h2>Loneliness</h2>
+                    <p>To combat loneliness, actively seek social connections by joining clubs, volunteering, or
+                        participating in activities you enjoy. Reconnect with old friends and make an effort to reach
+                        out to new people. Quality relationships can alleviate feelings of loneliness.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="col-lg-6 p-4">
+                <div
+                    class="container text-bg-light border border-dark rounded-3 p-4 d-flex flex-column align-items-center justify-content-center h-100 ">
+                    <img src="images/perfect.jpg" class="img-fluid rounded-3" width="500px"
+                        alt="Image of a person trying to achieve perfection">
+
+                    <hr>
+                    <h2>Perfectionism</h2>
+                    <p>Address perfectionism by setting realistic standards for yourself. Embrace the concept of "good
+                        enough" and allow for mistakes. Practice self-compassion and acknowledge that perfection is
+                        unattainable and unnecessary for personal growth.
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <footer>
+        <div class="container-fluid p-3 bg-dark-subtle">
+            <div class="row text-left">
+                <div class="col-md-5 col-sm-5">
+                    <h4 class="text-dark">About us</h4>
+                    <p class="text-muted"><b> Fit N Fine</b> is your trusted partner in fitness and well-being.We're
+                        dedicated
+                        to empowering individuals to live healthier lifestyles.
+                        Our team crafts tailored programs to meet every fitness goal.</p>
+                    <p class="pt-4 text-muted">Copyright ©2023 All rights reserved
+                        <span> Fit N Fine</span>
+                    </p>
+                </div>
+                <div class="col-md-5 col-sm-12">
+                    <h4 class="text-dark">Newsletter</h4>
+                    <p class="text-muted">Stay Updated</p>
+                    <form class="form-inline">
+                        <div class="col pl-0">
+                            <div class="input-group pr-5">
+                                <input type="text" class="form-control bg-dark text-white"
+                                    id="inlineFormInputGroupUsername2" placeholder="Email">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="bi bi-arrow-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-2 col-sm-12">
+                    <h4 class="text-dark">Follow Us</h4>
+                    <p class="text-muted">Let us be social</p>
+                    <div class="column text-dark">
+                        <a href="#" aria-label="facebook" class="text-dark"><i class="bi bi-facebook mx-1"></i></a>
+                        <a href="#" aria-label="instagram" class="text-dark"><i class="bi bi-instagram mx-1"></i></a>
+                        <a href="#" aria-label="twitter" class="text-dark"><i class="bi bi-twitter-x mx-1"></i></a>
+                        <a href="#" aria-label="youtube" class="text-dark"> <i class="bi bi-youtube mx-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
